@@ -1,0 +1,25 @@
+
+<!-- You can also use this markup -->
+<nav class="breadcrumbs">
+  <a href="#">Home</a>
+  <a class="current" href="">Concept</a>
+</nav>
+
+<div id="container" class="lu-form">
+	<div id="sliderconcept">
+	  <ul class="slides">
+	    <li class="slide"  ng-repeat="page in concepts">
+	    		<div class="row " style="background:#F2F2F2;padding:25px;">
+					<div class="large-6 columns" style="margin-right: 15px;">
+						<img src="{{page.imageurl}}" style="float:left;margin:15px;">
+					</div>
+					
+					<div class="small-block-grid-1 large-block-grid-1">
+						<div style="font-weight:bold">{{page.name}}</div>	
+						<p ng-bind-html="page.text"></p>
+					</div>
+				</div>
+	    </li>
+	 </ul>
+	</div>
+</div>

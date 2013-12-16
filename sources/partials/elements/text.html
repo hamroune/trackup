@@ -1,0 +1,16 @@
+<!-- Text -->
+<div class="name-field" 
+	lucondition="{{field.condition}}"
+	ng-class="field.visible == 'true' && 'show' || 'hide'"
+	>
+    <label>{{field.label}}</label>
+    <input type="text" ng-model="userdata[field.name]" type="text"   
+    	luvalidation
+    	data-val="{{field.name}}"
+		data-validate="validate(obligatoire)">
+
+    <small class="error" for="{{field.name}}">{{field.error}}</small>
+</div>
+
+<hr lucondition="{{field.condition}}" ng-class="field.visible == 'true' && 'show' || 'hide'"
+	>

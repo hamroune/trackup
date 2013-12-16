@@ -1,0 +1,15 @@
+
+<!-- Selction -->
+<div  class="name-field" lucondition="{{field.condition}}" ng-class="field.visible == 'true' && 'show' || 'hide'"
+        >
+    <label>{{field.label}}</label>
+    <select lumarques="field"
+         style="width:30%;"
+         ng-model="userdata[field.name]"
+         luvalidation
+         data-val="{{field.name}}"
+         data-validate="validate(obligatoire)">
+    </select>
+</div>
+<hr lucondition="{{field.condition}}" ng-class="field.visible == 'true' && 'show' || 'hide'"
+        >

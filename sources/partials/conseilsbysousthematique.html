@@ -1,0 +1,57 @@
+
+
+
+<!-- You can also use this markup -->
+<nav class="breadcrumbs">
+  <a href="#">Home</a>
+  <a href="#/wizard">Questionnaire conseils</a>
+  <a class="current" href="">{{currentSousThematique}}</a>
+</nav>
+
+<div id="container" class="lu-form">
+	<div id="sliderconseils">
+	  <ul class="slides">
+	    <li class="slide"  ng-repeat="conseil in conseils">
+			<div class="row lu-conseil-slide-container" data-abide >
+
+
+				<div class="row lu-conseil-background">
+					<div class="large-6 columns" style="margin-right: 30px;">
+						<img src="{{conseil.imageurl}}" style="float:left;margin:15px;" 
+						class="{{getClassImage(conseil)}} !== undefined && 'show' || 'hide'">
+
+						<iframe id="ytplayer" type="text/html" width="340" height="360"
+								ng-src="{{getVideoUrl(conseil)}}"
+								frameborder="0" allowfullscreen style="float:left;margin:15px;"
+								class="{{getClassVideo(conseil)}}"
+								>
+						</iframe>
+
+						
+						<hr class="{{getClassImageOrVideo(conseil)}}">
+						<div class="lu-tag-conseils">
+							<a href="{{conseil.link}}" target="_blank">En savoir +</a>
+						</div>
+						<div class="lu-tag-conseils" style="background:#FF644E;margin:15px; color:white;">catégorie: <span style="color:#222">{{conseil.category}}</span></div>
+						<div class="lu-tag-conseils" style="background:#FF644E;margin:15px; color:white;">Thématique: <span style="color:#222">{{conseil.thematique}}</span></div>
+						<div class="lu-tag-conseils" style="background:#FF644E;margin:15px; color:white;">Sous thématqiue: <span style="color:#222">{{conseil.sousthematique}}</span></div>
+						
+					</div>
+					
+					<div class="small-block-grid-1 large-block-grid-1">
+						<div style="font-weight:bold">{{conseil.name}}</div>
+				
+						<p ng-bind-html="conseil.text"></p>
+						
+					</div>
+				</div>
+			</div>         
+		</li>
+		<li class="slide">
+		<div class="row lu-conseil-slide-container" data-abide >
+			<a href="#/conseils" style="color:white;text-align:center;">Sélectionnez d’autres types de conseils</a>
+		</div>
+		</li>
+	  </ul>
+	</div>
+</div>

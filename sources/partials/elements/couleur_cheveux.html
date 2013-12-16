@@ -1,0 +1,12 @@
+<!-- Selction -->
+<div  class="name-field" lucondition="{{field.condition}}" ng-class="field.visible == 'true' && 'show' || 'hide'"
+	>
+	<label>{{field.label}}</label>
+	<div lucouleurcheveux="field" 
+		 ng-model="userdata[field.name]" 
+		 luvalidation
+		 data-val="{{field.name}}"
+		 data-validate="validate(obligatoire)"></div>
+</div>
+<hr lucondition="{{field.condition}}" ng-class="field.visible == 'true' && 'show' || 'hide'"
+	>

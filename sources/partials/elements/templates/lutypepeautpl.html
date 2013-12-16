@@ -1,0 +1,16 @@
+<div class="lu-teint-container">
+	
+	<div class="lu-type-peau-0" style="background-position: 0 0; opacity:1" />
+
+	<div class="lu-type-peau-1" style="background-position: 0 {{ -186*positionImage }}px; opacity:{{opacityImage}}" 
+	/>
+
+</div>
+
+<label>{{teintLabel}}</label>
+
+<div id="slidertypepeau" 
+	 ui-slider="{range: 'min', value: {{value}}, min:0, max:100}"
+	 ng-model="imageIndex"
+	 style="width:186px; float: left;">	
+</div>

@@ -1,0 +1,31 @@
+
+<div id="container" class="lu-wizard">
+<div >
+
+<div class=" row">
+
+
+
+
+  <ul class="large-block-grid-3">
+        <div class="quicksand" style="font-weight:bold">VOUS ETES SUR LE POINT DE RECEVOIR DE PRECIEUX CONSEILS 100% PERSONNALISES !</div>
+        <br>
+        <div style="color:rgb(131, 131, 116);">en choisissant une thématique...</div>
+
+        <img src="/img/fs-spinner.gif" style="margin-left: 50%;" class="loader-conseils">
+  
+        <li ng-repeat="conseilsByTh in conseilsByThematique" >
+                <span class="lu-thematique-conseils-titre quicksand"  style="font-weight:bold">{{conseilsByTh.key}}</span>
+              
+                <div ng-repeat="ssth in conseilsByTh.data">
+                    <div class="lu-thematique-conseils-size" 
+                         ng-click="gotoSousThematique(ssth.sousthematique.name)">
+                      <span>{{ssth.sousthematique.label}}</span>
+                      <span>{{ssth.size}} conseil(s)</span>
+                    </div>
+               </div>            
+          </   
+</ul>
+
+</div>
+

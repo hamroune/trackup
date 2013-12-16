@@ -1,0 +1,99 @@
+
+
+<!-- You can also use this markup -->
+<nav class="breadcrumbs">
+  <a href="#">Home</a>
+  <a href="#/wizard">Questionnaire conseils</a>
+  <a class="current" href="">Qestions</a>
+</nav>
+
+
+
+<div id="container" class="lu-form">
+
+  <div id="loading" style="font-size:150px;text-align: center; color:#F50BCF;">
+  </div>
+
+<div class="slider" id="slider">
+    <ul class="slides">
+        <li class="slide glide"  ng-repeat="s in slides ">
+            <div class="row lu-form-container">
+                <form class="lu-frm" data-abide id="slide-form-{{$index+1}}" method="get" action="" novaidate>
+                      <div ng-repeat="field in s" ng-switch on="field.type" class="{{field.class}}">
+                              <div ng-switch-when="text" ng-include="'partials/elements/text.html'">
+                              </div>
+
+                               <div ng-switch-when="simplelistbox" ng-include="'partials/elements/simplelistbox.html'">
+                              </div>
+
+                             <div ng-switch-when="textarea" ng-include="'partials/elements/textarea.html'">
+                              </div>
+
+                               <div ng-switch-when="imagebox" ng-include="'partials/elements/imagebox.html'">
+                              </div>
+
+                              <!-- Teint -->
+                               <div ng-switch-when="teint" ng-include="'partials/elements/teint.html'">
+                              </div>
+
+                              <!-- Couleur de Teint -->
+                               <div ng-switch-when="couleur_teint_hiver" ng-include="'partials/elements/couleur_teint_hiver.html'">
+                              </div>
+
+                              <!-- Type de Peau -->
+                              <div ng-switch-when="type_peau" ng-include="'partials/elements/type_peau.html'">
+                              </div>
+
+                              <!-- Brillance de peau-->
+                              <div ng-switch-when="brillance_peau" ng-include="'partials/elements/brillance_peau.html'">
+                              </div>
+
+                              <!-- les yeux-->
+                              <div ng-switch-when="couleur_yeux" ng-include="'partials/elements/couleur_yeux.html'">
+                              </div>
+
+                              <!-- les cheveux-->
+                              <div ng-switch-when="couleur_cheveux" ng-include="'partials/elements/couleur_cheveux.html'">
+                              </div>
+
+
+                              <!-- les images à sélécion multiple-->
+                              <div ng-switch-when="imageboxmultiple" ng-include="'partials/elements/imageboxmultiple.html'">
+                              </div>
+
+
+                              <!-- les cheveux-->
+                              <div ng-switch-when="points_rouges_visage" ng-include="'partials/elements/points_rouges_visage.html'">
+                              </div>
+
+
+                              <!-- les marques-->
+                              <div ng-switch-when="marques" ng-include="'partials/elements/marques.html'">
+                              </div>
+
+                              
+                              <!-- les marques-->
+                              <div ng-switch-when="date" ng-include="'partials/elements/date.html'">
+                              </div>
+
+
+
+                              <!-- les number-->
+                              <div ng-switch-when="number" ng-include="'partials/elements/number.html'">
+                              </div>
+
+
+                              <span ng-switch-default>Ce type n'est pas encore pris en charge !! coming soon</span>
+
+                      </div>
+
+                  <input type="submit" style="position:absolute; left:-2000px; width:1px height:1px;"/>
+
+
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+    
+</div>

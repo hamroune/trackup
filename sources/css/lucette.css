@@ -1,0 +1,142 @@
+body{
+    background: #eee;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato'
+}
+/**/
+
+.clear{
+    clear: left;
+}
+
+.midle{
+    width: 40%;
+    float: left;
+    margin-right: 25px;
+}
+
+.pricing-table .title{
+    background-color: #d9edf7;
+}
+
+.pricing-table .title:hover{
+    background-color: #eed3d7;
+}
+
+
+/*Integration*/
+.lato{
+    font-family:'Lato'; 
+}
+
+
+.tr-header{
+    margin: 0;
+    border: 0;
+    z-index: 1000;
+}
+
+.tr-header .tr-header-container{
+    height: 130px;
+    background-color: #3E2F64;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    padding: 20px;
+    z-index: 1000;
+}
+
+
+
+section::before,
+section::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+/* Triangles */
+.tr-style-triangles::before,
+.tr-style-triangles::after {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.tr-style-triangles::before {
+    top: -50px;
+    background: #2980b9;
+}
+
+.tr-style-triangles::after {
+    bottom: -50px;
+    z-index: 10;
+    background: inherit;
+}
+
+
+/* Triangles */
+.tr-rond-triangles::before,
+.tr-rond-triangles::after {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 50%;
+}
+
+.tr-rond-triangles::before {
+    top: -50px;
+    background: #2980b9;
+}
+
+.tr-rond-triangles::after {
+    bottom: -50px;
+    z-index: 10;
+    background: inherit;
+}
+
+
+.tr-main{
+    position: relative;
+    padding: 10em 10%;
+    background: #29B985;
+    color: #fff;
+    text-align: center;
+    min-height: 450px;
+}
+
+.tr-main-2{
+    position: relative;
+    padding: 10em 10%;
+    background: #8D414A;
+    color: #fff;
+    text-align: center;
+    min-height: 650px;
+}
+
+.tr-main-3{
+    position: relative;
+    padding: 10em 10%;
+    background: #3498DB;
+    color: #fff;
+    text-align: center;
+    min-height: 450px;
+}
+
+.tr-footer{
+    padding: 20px;
+    height: 400px;
+    background: #222;
+}

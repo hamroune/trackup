@@ -1,0 +1,42 @@
+
+
+
+<!-- You can also use this markup -->
+<nav class="breadcrumbs">
+  <a href="#">Home</a>
+  <a href="#/wizard">Questionnaire Conseils</a>
+</nav>
+
+
+<div id="container" class="lu-wizard"> 
+   
+
+   <div class=" large-8 columns" >     
+        <ul class="small-block-grid-1 large-block-grid-1">
+
+
+          <li class="form quicksand" style="background: none;">
+              De quoi voulez-vous bavarder?
+          </li>
+        </ul>    
+        <ul class="small-block-grid-1 large-block-grid-3">
+          <li ng-repeat="form in forms">
+            <div class="columns text-center form lu-form-wizard-height quicksand" style="background-color:{{form.color}}" ng-click="wizardForm(form)">
+                {{form.name}}
+            </div>
+            <div class="lu-form-description">{{form.description}}</div>
+          </li>
+        </ul>
+  </div>
+
+
+
+  <div class=" large-4 columns lu-link-ensemble">
+        <a href="#/conseils" class="lu-link-conseils">Retrouver les astuces que lucette vous a déja confiées</a> 
+
+        <img class="lu-link-image-conseils" src="img/ampoule.jpg"></img>       
+        <img  class="lu-bavarde"  src="img/bavardare.png"></img>       
+  </div> 
+
+
+</div>
