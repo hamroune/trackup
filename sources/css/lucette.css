@@ -140,3 +140,9 @@ section::after {
     height: 400px;
     background: #222;
 }
+
+.tr-small{
+    color: #857B7B;
+    font-size: 0.35em;
+    font-weight: normal;
+}
