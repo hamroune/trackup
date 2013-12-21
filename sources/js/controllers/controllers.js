@@ -1,4 +1,4 @@
-var lucetteApp = angular.module('lucetteApp', [
+var trackupApp = angular.module('trackupApp', [
     'restangular', 
     'ui.slider', 
     'easypiechart', 
@@ -10,7 +10,7 @@ var lucetteApp = angular.module('lucetteApp', [
     'lucetteFactories',
     'ngSanitize']);
 
-lucetteApp.config(['$routeProvider', 'RestangularProvider', '$locationProvider',
+trackupApp.config(['$routeProvider', 'RestangularProvider', '$locationProvider',
     function($routeProvider, RestangularProvider, $locationProvider ) {
 
         $locationProvider.html5Mode(false);
@@ -86,7 +86,7 @@ lucetteApp.config(['$routeProvider', 'RestangularProvider', '$locationProvider',
     }]);
 
 
-lucetteApp
+trackupApp
     .controller('HeaderCtrl', function ($scope, Restangular, $routeParams, $timeout, UserService) {
         
         $scope.getUser = function(){
@@ -104,7 +104,7 @@ lucetteApp
   
 });
 
-lucetteApp
+trackupApp
     .controller('SignCtrl', function ($scope, Restangular, $routeParams, $timeout, UserService) {
         $('.lu-wizard').css('background', "#3498DB");
 
@@ -146,7 +146,7 @@ lucetteApp
         $('.lu-signin').hide();
     })
 
-lucetteApp
+trackupApp
     .controller('GeneralCtrl', function ($scope, Restangular, $routeParams, $timeout, UserService, DefaultOptionsService) {
 
         $scope.defauloptions = DefaultOptionsService.getDefaultOptions();
@@ -295,14 +295,19 @@ lucetteApp
         }
     })
 
-lucetteApp
+trackupApp
     .controller('HomeCtrl', function ($scope, Restangular, $routeParams, $timeout) {        
         
         $('.ketchup-error').hide();
         
-        $timeout(function(){            
+        $timeout(function(){      
+
+             
              window.setInterval(function(){
                 $('.js-join-us').animo( { animation: ['tada'], duration: 0.5 } );
+
+                
+                
             }, 3000);
         }, 1000);
 
@@ -315,7 +320,7 @@ lucetteApp
 
 var pallettte = ["#FF644E"];
 var size = pallettte.length;
-lucetteApp
+trackupApp
     .controller('WizardCtrl', function ($scope, Restangular, $routeParams, $timeout, $location, UserService, DefaultOptionsService, $rootScope) {
 
         $scope.defauloptions = DefaultOptionsService.getDefaultOptions();
@@ -344,7 +349,7 @@ lucetteApp
 
     });
 
-lucetteApp
+trackupApp
     .controller('FormCtrl', function($scope, Restangular, $routeParams, $timeout, UserService, DefaultOptionsService){
 
         var pallettte = ["#FF644E","#FF644E", "#333", "#F2F2F2"];
@@ -502,7 +507,7 @@ lucetteApp
 });
  
 
- lucetteApp
+ trackupApp
     .controller('ConseilsCtrl', function($scope, Restangular, $routeParams, $timeout, UserService){
 
         $scope.goToConseil = function(conseilId){
@@ -584,7 +589,7 @@ lucetteApp
 
     
 
- lucetteApp
+ trackupApp
     .controller('ConseilCtrl', function($scope, Restangular, $routeParams, $timeout, UserService){
 
          
@@ -625,7 +630,7 @@ lucetteApp
         }
     });
 
-lucetteApp
+trackupApp
     .controller('ConseilBySousThematiqueCtrl', function($scope, Restangular, $routeParams, $timeout, UserService){
 
         var currentSousThematique = $routeParams.name;
@@ -687,7 +692,7 @@ lucetteApp
     });
 
 
-lucetteApp
+trackupApp
     .controller('ConceptCtrl', function($scope, Restangular, $routeParams, $timeout, UserService){
          Restangular.all('concepts').getList().then(function(data){
             $scope.concepts = data;
@@ -705,7 +710,7 @@ lucetteApp
     });
 
 
-lucetteApp
+trackupApp
     .controller('LucetteCtrl', function($scope, Restangular, $routeParams, $timeout, UserService){
          $scope.lucette = Restangular.one('lucette').get();                
     });

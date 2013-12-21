@@ -74,8 +74,8 @@ section::after {
 }
 
 .tr-style-triangles::before {
-    top: -50px;
-    background: #2980b9;
+    top: 80px;
+    background: #3E2F64;
 }
 
 .tr-style-triangles::after {
@@ -114,7 +114,7 @@ section::after {
     background: #29B985;
     color: #fff;
     text-align: center;
-    min-height: 450px;
+    min-height: 50em;
 }
 
 .tr-main-2{
@@ -128,11 +128,11 @@ section::after {
 
 .tr-main-3{
     position: relative;
-    padding: 10em 10%;
-    background: #3498DB;
+    background: #1D1E1F;
     color: #fff;
     text-align: center;
     min-height: 450px;
+    z-index: 1;
 }
 
 .tr-footer{

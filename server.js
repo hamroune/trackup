@@ -171,7 +171,7 @@ app.post('/api/auth/login' ,UserService.authenticate,  function(req, res){
 //CAll Auth Service
 auth(app, express);
 
-var port = process.env.PORT || 4000;
+var port = process.env.PORT || 3000;
 
 console.log('Server ready @', port);
 app.listen(port);
