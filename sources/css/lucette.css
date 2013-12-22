@@ -142,7 +142,21 @@ section::after {
 }
 
 .tr-small{
-    color: #857B7B;
+    color: #F6C810;
     font-size: 0.35em;
     font-weight: normal;
+}
+
+.tr-home-p{
+    background: #f0523f;
+    color: #FFF;
+    padding: 15px;
+    font-size: 4em;
+}
+
+.tr-home-p-second{
+    background: #ecebec;
+    color: #4c4c4c;
+    padding: 15px;
+    font-size: 3em;   
 }

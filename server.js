@@ -164,8 +164,7 @@ app.post('/api/auth/login' ,UserService.authenticate,  function(req, res){
     }
 
     
-})
-
+});
 
 
 //CAll Auth Service
