@@ -1,11 +1,11 @@
 body{
-    background: #eee;
+    background: url('/img/background.jpg');
     font-size: 16px;
     line-height: 22px;
-    font-family: 'Lato',Arial, Helvetica, sans-serif;
+    font-family: Lato;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    color: #222;
+    color: #F6C810;    
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -48,7 +48,6 @@ h1, h2, h3, h4, h5, h6{
     height: 130px;
     background-color: #3E2F64;
     width: 100%;
-    text-align: center;
     font-size: 3em;
     padding: 20px;
     z-index: 1000;
@@ -82,7 +81,8 @@ section::after {
 .tr-style-triangles::after {
     bottom: -50px;
     z-index: 10;
-    background: inherit;
+    /*background: inherit;*/
+    background: #30C1BE;
 }
 
 
@@ -112,10 +112,11 @@ section::after {
 .tr-main{
     position: relative;
     padding: 10em 10%;
-    background: #29B985;
+    /*background: #29B985;*/
     color: #fff;
     text-align: center;
     min-height: 50em;
+    background: url('/img/background.jpg');
 }
 
 .tr-main-2{
@@ -160,4 +161,16 @@ section::after {
     color: #4c4c4c;
     padding: 15px;
     font-size: 3em;   
+}
+
+.dashboard{
+    background: #0C0B0C;
+    padding:50px;
+    min-height:750px;
+    fill: #ACD9F8;
+}
+
+.head-text-dashboard{
+    text-align: center;
+    font-size: 3em;
 }
