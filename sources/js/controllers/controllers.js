@@ -151,13 +151,11 @@ trackupApp
 
             window.setTimeout(function() {
                  $scope.keys = keys;
-                 console.log("scope keys", keys);
                  $('#selection').select2();                   
             }, 100);
                 
             window.setTimeout(function() {
                     var nodes = [dashboard.mainDimension, dashboard.groupDimension];
-                    console.log("nodes", nodes);
                     $('#selection').val(nodes).select2();
             },1000);
 
