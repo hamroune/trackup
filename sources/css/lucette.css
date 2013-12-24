@@ -174,3 +174,13 @@ section::after {
     text-align: center;
     font-size: 3em;
 }
+
+.dc-chart .axis path, .axis line{
+    fill: none;
+    stroke: #ACD9F8;
+    shape-rendering: crispEdges;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice{
+    background: #F6C810
+}

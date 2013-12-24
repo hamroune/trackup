@@ -2,14 +2,16 @@
 		
 	
 	<div class="large-12 columns dashboard" >
-       	<p class="head-text-dashboard">Measure of Gain/Loss index</p>
-        <div id="yearly-bubble-chart"></div>
-		<div id="gain-loss-chart"></div>
-		<div id="fluctuation-chart"></div>
-        <div id="quarter-chart"></div>
-        <div id="day-of-week-chart"></div>
-        <div id="monthly-move-chart"></div>
-        <div id="monthly-volume-chart"></div>
+       	<p class="head-text-dashboard">USer/Actions Anaysis</p>
+        
+        <select lus2 multiple id="selection" style="width:700px;margin-left:45px;">
+           <option ng-repeat="option in keys" value="{{option}}">{{option}}</option>  
+        </select>
+       
+        <div id="users-action1-chart" class="large-6 columns">
+            
+        </div>
+        <div id="users-action2-chart"></div>
     </div>
 
 </div>
