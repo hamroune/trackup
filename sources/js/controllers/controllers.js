@@ -159,7 +159,7 @@ trackupApp
                     var nodes = [dashboard.mainDimension, dashboard.groupDimension];
                     console.log("nodes", nodes);
                     $('#selection').val(nodes).select2();
-            },400);
+            },1000);
 
             $('#selection').on('change', function(){
                 if($('#selection').val().length == 2){
