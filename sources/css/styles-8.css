@@ -541,7 +541,7 @@ blockquote {
 /* ======= Promo Section ======= */
 .promo {
   position: relative;
-  background: #000 url('http://img.over-blog.com/500x331/4/42/91/34/Alger-le-soir.jpg') no-repeat center center;
+  background: #000 url('../img/promo-bg.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
