@@ -1,0 +1,48 @@
+{
+  "name": "User Track",
+  "version": "0.1.1",
+  "description": "Developer Tools extension for User track",
+  "author": "zahir hamroune",
+  "minimum_chrome_version": "22.0",
+  "icons": {
+    "16": "img/extension16.png",
+    "48": "img/extension48.png",
+    "128": "img/extension128.png"
+  },
+  "manifest_version": 2,
+  
+  "devtools_page": "devtools.html",
+  
+ "background": { "page":"background.html" },
+
+ "options_page": "option.html",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "match_about_blank": true,
+      "js": ["js/contentscript.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "browser_action": {
+    "default_title": "User Track BA"
+  },
+
+  // needed by backboneAgent loader
+  "web_accessible_resources": [
+    "js/lib/*",
+    "js/backboneAgent/*"
+  ],
+
+  // fix the handlebars template unsafe eval error
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "permissions": [
+    "tabs",
+    "http://*/*", 
+    "https://*/*" 
+  ]  
+}

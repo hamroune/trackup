@@ -1,8 +1,0 @@
-<!-- Text -->
-<div class="name-field" lucondition="{{field.condition}}" ng-class="field.visible == 'true' && 'show' || 'hide'">
-    <label>{{field.label}}</label>
-    <textarea type="textarea" ng-model="userdata[field.name]"></textarea>
-    <small class="error">{{field.error}}</small>
-</div>
-<hr ng-class="field.visible == 'true' && 'show' || 'hide'"
-	 lucondition="{{field.condition}}">
