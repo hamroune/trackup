@@ -20,6 +20,16 @@
 ** Globals
 */
 
+  
+   var p = document.createElement("style");
+	
+	// l'ajoute à la fin du corps du document
+	document.body.appendChild(p);
+	var t = document.getElementsByTagName("style");
+	
+	t[t.length-1].innerHTML='a, input { pointer-events: none; cursor: default; } ';
+	
+
 var CSSViewer_container
 
 // CSS Properties
@@ -843,6 +853,7 @@ CSSViewer.prototype.IsEnabled = function()
 CSSViewer.prototype.Enable = function()
 {
 	var document = GetCurrentDocument();
+	
 	var block = document.getElementById('CSSViewer_block');
 
 	if (!block){
