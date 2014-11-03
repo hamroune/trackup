@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html ng-app data-ng-csp="">
+<html>
 <head>
 	<style type="text/css">
 	body{
-		background-color: #2d3e50;
+		background-color: rgb(61,59,60);
 		color: white;
 		font-size: 14px;
 	}
+
+	.myButton {
+		-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+		-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+		box-shadow:inset 0px 34px 0px -15px #b54b3a;
+		background-color:#a73f2d;
+		border:1px solid #241d13;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:9px 23px;
+		text-decoration:none;
+		text-shadow:0px -1px 0px #7a2a1d;
+	}
+	.myButton:hover {
+		background-color:#b34332;
+	}
+	.myButton:active {
+		position:relative;
+		top:1px;
+	}
+
 	</style>
 
 		<script type="text/javascript"
@@ -14,12 +39,25 @@
 
         <script type="text/javascript" src="js/cssviewer.js"></script> 
         <script src="js/panel/panel.js"></script>
-
+        
 </head>
-<body >
-   
-    
-    <button id="disable">disable</button> 
-    <button id="enable">enable</button> 
+<body>
+<button id="disable">disable</button>
+<button id="enable">enable</button>
+<br>
+		<div style="margin-left: 100px" >
+			<label style="margin-right:138px">When:</label>
+			<label style="margin-right:162px">On:</label>
+			<label style="margin-right:137px">Action:</label>
+			<label >Value:</label>					
+			<div>
+				<input type="text" name="when" style="margin-right:10px;height:30px; 	border: 0px;	border-radius: 2px;">
+				<input type="text" name="on" style="margin-right:10px;height:30px; 	border: 0px;	border-radius: 2px;">
+				<input type="text" name="action" style="margin-right:10px;height:30px; 	border: 0px;	border-radius: 2px;">						
+				<input type="text" name="value" style="margin-right:10px;height:30px; 	border: 0px;	border-radius: 2px;">
+				<input type="submit" value="Add" class="myButton">
+			</div>
+		</div>
+<div id="msg"></div>
 </body>
 </html>

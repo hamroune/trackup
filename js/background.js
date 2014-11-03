@@ -24,6 +24,8 @@ chrome.runtime.onConnect.addListener(function(port) {
         port.onMessage.addListener(function(msg) {
             // Received message from devtools. Do something:
             console.log('Received message from devtools page', msg);
+            if (msg.type==="disable") chrome.tabs.insertCSS(null, {file:'css/desactivateClick.css'});
+            if (msg.type==="enable")  chrome.tabs.insertCSS(null, {file:'css/activateClick.css'});
             //alert('Received message from devtools page ==>'+JSON.stringify(msg))
         });
 
