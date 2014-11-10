@@ -1,4 +1,4 @@
-body { 
+a,input[type="submit"] { 
 	pointer-events: all; 
 	cursor: default; 
 }

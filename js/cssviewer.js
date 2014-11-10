@@ -535,6 +535,7 @@ function UpdateEffects(element)
 
 function CSSViewerMouseOver(e)
 {
+	
 	// Block
 	var document = GetCurrentDocument();
 	var block = document.getElementById('CSSViewer_block');
@@ -543,7 +544,7 @@ function CSSViewerMouseOver(e)
 
 	// Outline element
 	if (this.tagName != 'body') {
-		this.style.outline = '1px solid #f00';
+		this.style.outline = '2px solid #0099CC';
 	}
 	
 	var rect = this.getBoundingClientRect();
@@ -571,43 +572,30 @@ function CSSViewerMouseOver(e)
 
 function CSSViewerMouseDown(e)
 {
-	//alert('CLICKED!!!')
-	// Block
-	var document = GetCurrentDocument();
-	var block = document.getElementById('CSSViewer_block');
+	if(this.tagName != 'body'){
+		this.setAttribute("style","pointer-events: none; cursor: default");
+ 	}
+ 	e.stopPropagation();
+ 	return false;
+}
+var c=[],i=0;
+function CSSViewerClick(e)
+{
+	i++;
+ 	if(this.tagName != 'BODY'){
+ 		c.push(this);
+ 	}
+ 	if (i==4) c[c.length-1].setAttribute("style","outline: 3px solid yellow;");
+ 	
+}
 
-	block.firstChild.innerHTML = '&lt;' + this.tagName + '&gt;' + (this.id == '' ? '' : ' #' + this.id) + (this.className == '' ? '' : ' .' + this.className);
-
-	// Outline element
-	if (this.tagName != 'body') {
-		this.style.outline = '1px solid  #000; background:grey;'//'10px dashed #f00';
-	}
-	
-	var rect = this.getBoundingClientRect();
-
-	// Updating CSS properties
-	var element = document.defaultView.getComputedStyle(this, null);
-
-	notifyDevtools("This :"+block.firstChild.innerHTML+' top?'+rect.top);
-
-	UpdatefontText(element);
-	UpdateColorBg(element);
-	UpdateBox(element);
-	UpdatePositioning(element);
-	UpdateTable(element, this.tagName);
-	UpdateList(element, this.tagName);
-	UpdateMisc(element);
-	UpdateEffects(element);
-
-	// console.log( element.cssText ); //< debug the hovred el css
-
-	cssViewerRemoveElement("cssViewerInsertMessage");
-
-	e.stopPropagation();
-
-	throw 'stop...'
-	return false;
-	
+function CSSViewerMouseUp(e)
+{
+	if(this.tagName != 'body'){
+		this.setAttribute("style","outline: 3px solid yellow;");
+ 	}
+ 	e.stopPropagation();
+ 	return false;
 }
 
 notifyDevtools = function(msg){
@@ -617,9 +605,11 @@ notifyDevtools = function(msg){
 
 function CSSViewerMouseOut(e)
 {
-	this.style.outline = '';
+	
+	if (this.style.outline = '2px solid #0099CC') this.style.outline = '';
 
 	e.stopPropagation();
+	return false;
 }
 
 function CSSViewerMouseMove(e)
@@ -627,7 +617,7 @@ function CSSViewerMouseMove(e)
 	var document = GetCurrentDocument();
 	var block = document.getElementById('CSSViewer_block');
 
-	block.style.display = 'block';
+	block.style.display = 'none';
 	
 	var pageWidth = window.innerWidth;
 	var pageHeight = window.innerHeight;
@@ -765,8 +755,10 @@ function CSSViewer()
 		var elements = this.GetAllElements(document.body);
 
 		for (var i = 0; i < elements.length; i++)	{
+			elements[i].addEventListener("click", CSSViewerClick, true);
 			elements[i].addEventListener("mouseover", CSSViewerMouseOver, false);
 			elements[i].addEventListener("mousedown", CSSViewerMouseDown, false);
+			elements[i].addEventListener("mouseup", CSSViewerMouseUp, false);
 			elements[i].addEventListener("mouseout", CSSViewerMouseOut, false);
 			elements[i].addEventListener("mousemove", CSSViewerMouseMove, false);
 		}	
